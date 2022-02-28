@@ -29,9 +29,9 @@ public class GraphTraverser {
 	public static EdgeList getEdgeList(ArrayList<Path> arr, String startVertex){
 		EdgeList toReturn = new EdgeList();
 		for (Path p : arr){
-			if (p.getLastVertex().getName() != startVertex){
-				Vertex[] pArr = p.getList();
-				Edge toAdd = new Edge(pArr[pArr.length-2], p.getLastVertex(), p.getLastWeight());
+			Vertex[] pArr = p.getList();
+			if (pArr.length > 1){
+				Edge toAdd = new Edge(pArr[pArr.length-2], pArr[pArr.length-1], p.getLastWeight());
 				toReturn.addEdge(toAdd);
 			}
 		}

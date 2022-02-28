@@ -75,7 +75,15 @@ public class Runner {
 						EdgeList l = GraphTraverser.getEdgeList(arr, startVertex);
 						System.out.println(l);
 					}
-
+					System.out.println("----------------------------------");
+					System.out.println("Type 1 if you want to process another graph, 2 if you want to use a different algorithm, or 3 to quit: ");
+					String stepper = scan.nextLine();
+					while (!(stepper.equals("1") || stepper.equals("2") || stepper.equals("3"))){
+						System.out.println(stepper + " is not 1, 2, or 3 silly");
+						System.out.println("Type 1 if you want to process another graph, 2 if you want to process the same graph, or 3 to quit: ");
+						stepper = scan.nextLine();
+					}
+					step = Integer.parseInt(stepper) - 1;
 				}
 			} else if (step == 2){
 				loopCond = false;

@@ -59,7 +59,7 @@ public class EdgeList {
 	}
 
 	public String toString(){
-		return left.getName() + " <-> " + right.getName();
+		return left.getName() + " <-> " + right.getName() + ": " + weight;
 	}
 
 
