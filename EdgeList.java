@@ -24,7 +24,7 @@ public class EdgeList {
 	}
 
 
-} class Edge {
+ }class Edge {
 	private Vertex left, right;
 	private int weight;
 
