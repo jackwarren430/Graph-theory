@@ -16,8 +16,8 @@ public class GraphTraverser {
 				arr.add(p);
 				for (Vertex v : lastVertex.getFriends()){
 					if (!v.getFlag()){
-						p = new Path(p, v);
-						ds.add(p);
+						Path p2 = new Path(p, v);
+						ds.add(p2);
 					}
 				}
 			}

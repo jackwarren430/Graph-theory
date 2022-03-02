@@ -27,7 +27,7 @@ public class Vertex {
 	}
 
 	public String toString(){
-		String toReturn = "";
+		String toReturn = getName();
 		for (Vertex x : friends.keySet()){
 			toReturn += "<" + x.getName() + "," + this.getWeight(x) + "> ";
 		}

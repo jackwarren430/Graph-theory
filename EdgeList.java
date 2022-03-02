@@ -17,10 +17,12 @@ public class EdgeList {
 
 	public String toString(){
 		String toReturn = "";
+		int count = 0;
 		for (Edge e : list){
-			toReturn += e + ", ";
+			toReturn += e + "\n";
+			count += e.getWeight();
 		}
-		return toReturn;
+		return toReturn + "Total: " + count;
 	}
 
 
